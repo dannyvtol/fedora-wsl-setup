@@ -31,7 +31,7 @@ git config --global user.name $GIT_USERNAME
 git config --global user.email $GIT_EMAIL
 
 echo "Cloning repository"
-git clone git@github.com:dannyvtol/fedora-wsl-setup.git
+git clone https://github.com/dannyvtol/fedora-wsl-setup.git
 
 # Install Brew
 /bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"
