@@ -18,6 +18,7 @@ sudo passwd $USER
 # Update Distro packages and prepare for development environment
 sudo dnf update -y && sudo dnf upgrade -y
 sudo dnf group install development-tools -y
+sudo dnf install -y gawk
 
 ssh-keygen
 
