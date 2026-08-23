@@ -4,6 +4,7 @@
 BREW_PACKAGES=(
     python3
     uv
+    node
     bun
     php
     composer
@@ -34,11 +35,14 @@ echo "Cloning repository"
 git clone https://github.com/dannyvtol/fedora-wsl-setup.git
 
 # Install Brew
-/bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"
+bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"
 echo >> /home/wsl/.bashrc
 echo 'eval "$(/home/linuxbrew/.linuxbrew/bin/brew shellenv bash)"' >> /home/wsl/.bashrc
 eval "$(/home/linuxbrew/.linuxbrew/bin/brew shellenv bash)"
 
 brew install "${BREW_PACKAGES[@]}" -y
 
-/bin/bash -c "$SCRIPT_DIR/scripts/claude/install.sh"
+chmod +x "$SCRIPT_DIR/fedora-wsl-setup/scripts/claude/install.sh"
+bash -c "$SCRIPT_DIR/fedora-wsl-setup/scripts/claude/install.sh"
+
+rm -rf "$SCRIPT_DIR/fedora-wsl-setup"
