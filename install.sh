@@ -9,6 +9,7 @@ BREW_PACKAGES=(
     php
     composer
     just
+    gh
 )
 
 SCRIPT_DIR=$( cd -- "$( dirname -- "${BASH_SOURCE[0]}" )" &> /dev/null && pwd )
