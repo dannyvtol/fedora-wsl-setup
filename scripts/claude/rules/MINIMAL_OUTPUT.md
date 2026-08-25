@@ -2,7 +2,7 @@
 
 **Priority:** Conciseness > Grammar > Completeness
 
-## Core Rules
+## Rules
 - Fragments only, no full sentences
 - Kill articles: "the", "a", "an"
 - Drop subjects: "Running now" **not** "I am running now"
