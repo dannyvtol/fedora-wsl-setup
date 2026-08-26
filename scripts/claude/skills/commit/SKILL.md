@@ -1,9 +1,10 @@
 ---
-name: commit
-description: Create conventional commit message
+name: gitcommit
+description: Commit with conventional messages
 ---
+# Git commit
 
-Git commits MUST follow the `Conventional Commits` specification.
+Group `git diff -p` by ```## Types```. See ```## Format``` and ```## Rules```, formulate commit message.
 
 ## Format
 
@@ -12,7 +13,7 @@ Git commits MUST follow the `Conventional Commits` specification.
 
 [optional body]
 
-[optional footer(s)]
+[optional footer]
 ```
 
 ## Types
@@ -23,19 +24,15 @@ Git commits MUST follow the `Conventional Commits` specification.
 | `fix` | Bug fix |
 | `docs` | Documentation only |
 | `style` | Formatting, whitespace (no logic change) |
-| `refactor` | Neither feat nor fix |
+| `refactor` | Reorganizing codebase only |
 | `test` | Adding/fixing tests |
 | `chore` | Build, tooling, deps |
-| `perf` | Performance improvement |
 | `ci` | CI/CD changes |
 
 ## Rules
 
 - Type + description: **required**
-- Scope: optional, in parentheses → `feat(auth): ...`
+- Scope: optional, links issue, in parentheses → `feat(#1): ...`
 - Breaking change: add `!` before `:` → `feat!: ...`
 - Breaking change footer: `BREAKING CHANGE: <description>`
 - Body/footers separated from description by one blank line
-
-## Action
-Execute ```git diff -p``` then use ```## Format``` to formulate the commit message
