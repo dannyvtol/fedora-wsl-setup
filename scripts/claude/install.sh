@@ -4,10 +4,13 @@ BREW_PACKAGES=(
     claude-code
     ollama
     herdr
+    git-gtr
 )
 
 SCRIPT_DIR=$( cd -- "$( dirname -- "${BASH_SOURCE[0]}" )" &> /dev/null && pwd )
 
+brew tap coderabbitai/tap
+brew trust coderabbitai/tap
 brew install "${BREW_PACKAGES[@]}" -y
 
 cp $SCRIPT_DIR/settings.json $HOME/.claude/settings.json
