@@ -19,6 +19,6 @@ cp $SCRIPT_DIR/settings.json $HOME/.claude/settings.json
 npx skills@latest add mattpocock/skills --global -a claude-code
 echo "eval \"\$(fzf --bash)\"" >> ~/.bashrc
 
-git gtr init bash
+git gtr init bash >> ~/.bashrc
 
 echo "RUN: source ~/.bashrc"
